@@ -1,0 +1,7 @@
+from_domain: 10
+to_domain: 7
+topics:
+  foo:
+    type: test_msgs/msg/BasicTypes
+    qos:
+      depth: depth_cannot_be_string

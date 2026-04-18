@@ -1,0 +1,29 @@
+from_domain: 10
+to_domain: 7
+topics:
+  foo:
+    type: test_msgs/msg/Empty
+    # No options
+  bar:
+    type: test_msgs/msg/BasicTypes
+    # QoS policy overrides
+    qos:
+      reliability: best_effort
+      durability: transient_local
+      history: keep_all
+      depth: 42
+      deadline: 123456
+      lifespan: auto
+      liveliness: manual_by_topic
+      liveliness_lease_duration: 1000
+    remap: bar/remapped
+    bidirectional: True
+  baz:
+    type: test_msgs/msg/Empty
+    # Trying other values for deadline and lifespan
+    qos:
+      deadline: auto
+      lifespan: -5
+      liveliness_lease_duration: -1000
+    remap: ''
+    reversed: True

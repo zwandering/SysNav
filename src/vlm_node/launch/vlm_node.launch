@@ -1,0 +1,47 @@
+import os
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, OpaqueFunction
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, PythonExpression
+from launch_ros.actions import Node, SetParameter
+from launch_ros.substitutions import FindPackageShare
+
+
+def launch_vlm_node(context):
+    this_file = os.path.realpath(__file__)
+    ros_ws = os.path.abspath(os.path.join(this_file, "../../../.."))
+    vlm_node_dir = os.path.join(ros_ws, "src", "vlm_node", "vlm_node")
+    vlm_node = Node(
+        package='vlm_node',
+        executable='vlm_reasoning_node',
+        name='vlm_node',
+        output='screen',
+        parameters=[{
+            PythonExpression([
+                "'", FindPackageShare('vlm_node'), "/",
+                LaunchConfiguration('config'), ".yaml'"
+            ]),
+        }]
+        # prefix=['xterm -e gdb -ex run --args']
+    )
+    return [vlm_node]
+
+
+def generate_launch_description():
+    use_sim_time = LaunchConfiguration('use_sim_time')
+    config = LaunchConfiguration('config')
+
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value='false',
+            description='Use simulation (Gazebo) clock if true'
+        ),
+        DeclareLaunchArgument(
+            'config',
+            default_value='vlm_config',
+            description='Configuration file name (without .yaml extension)'
+        ),
+        SetParameter(name='use_sim_time', value=use_sim_time),
+        OpaqueFunction(function=launch_vlm_node)
+    ])

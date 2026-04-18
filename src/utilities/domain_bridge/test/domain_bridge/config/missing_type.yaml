@@ -1,0 +1,4 @@
+topics:
+  foo:
+    from_domain: 10
+    to_domain: 7

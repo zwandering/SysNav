@@ -1,0 +1,209 @@
+prompts:
+  chair:
+    prompts:
+      - chair
+    is_instance: true
+  desk:
+    prompts:
+      - desk
+    is_instance: true
+  tv_monitor:
+    prompts:
+      - tv_monitor
+    is_instance: true
+  sofa:
+    prompts:
+      - sofa
+    is_instance: true
+  # floor:
+  #   prompts:
+  #     - floor
+  #   is_instance: false
+  # ceiling:
+  #   prompts:
+  #     - ceiling
+  #   is_instance: false
+  unknown:
+    prompts:
+      - unknown
+    is_instance: false
+  # window:
+  #   prompts:
+  #     - window
+  #   is_instance: true
+  printer:
+    prompts:
+      - printer
+    is_instance: true
+  coffee_machine:
+    prompts:
+      - coffee machine
+    is_instance: true
+  # pillow:
+  #   prompts:
+  #     - pillow
+  #   is_instance: true
+  refrigerator:
+    prompts:
+      - refrigerator
+    is_instance: true
+  # door:
+  #   prompts:
+  #     - door
+  #   is_instance: true
+  garbage_bin:
+    prompts:
+      - trash can
+    is_instance: true
+  shoe:
+    prompts:
+      - shoe
+    is_instance: true
+  sink:
+    prompts:
+      - sink
+    is_instance: true
+  # table:
+  #   prompts:
+  #     - table
+  #   is_instance: true
+  # oven:
+  #   prompts:
+  #     - oven
+  #   is_instance: true
+  bed:
+    prompts:
+      - bed
+    is_instance: true
+  # wall:
+  #   prompts:
+  #     - wall
+  #   is_instance: false
+  painting:
+    prompts:
+      - painting
+    is_instance: true
+  bulletin_board:
+    prompts:
+      - bulletin board
+    is_instance: true
+  plant:
+    prompts:
+      - potted plant
+    is_instance: true
+  vase:
+    prompts:
+      - vase
+    is_instance: true
+  # cabinet:
+  #   prompts:
+  #     - cabinet
+  #   is_instance: true
+  # shelf:
+  #   prompts:
+  #     - shelf
+  #   is_instance: true
+  book:
+    prompts:
+      - book
+    is_instance: true
+  cup:
+    prompts:
+      - cup
+    is_instance: true
+  sculpture:
+    prompts:
+      - sculpture
+    is_instance: true
+  keyboard:
+    prompts:
+      - keyboard
+    is_instance: true
+  mouse:
+    prompts:
+      - mouse
+    is_instance: true
+  clock:
+    prompts:
+      - clock
+    is_instance: true
+  phone:
+    prompts:
+      - phone
+    is_instance: true
+  toilet:
+    prompts:
+      - toilet
+    is_instance: true
+  bathtub:
+    prompts:
+      - bathtub
+    is_instance: true
+  microwave oven:
+    prompts:
+      - microwave oven
+    is_instance: true
+  pan:
+    prompts:
+      - pan
+    is_instance: true
+  # box:
+  #   prompts:
+  #     - box
+  #   is_instance: true
+  suitcase:
+    prompts:
+      - suitcase
+    is_instance: true
+  # smoke_detector:
+  #   prompts:
+  #     - smoke detector
+  #   is_instance: true
+  light:
+    prompts:
+      - light 
+    is_instance: true
+  # carpet:
+  #   prompts:
+  #     - carpet 
+  #   is_instance: true
+  curtain:
+    prompts:
+      - curtain
+    is_instance: true
+  whiteboard:
+    prompts:
+      - whiteboard
+    is_instance: true
+  shower knob:
+    prompts:
+      - shower knob
+    is_instance: true
+  bottle:
+    prompts:
+      - bottle
+    is_instance: true
+  water dispenser:
+    prompts:
+      - water dispenser
+    is_instance: true
+  vending machine:
+    prompts:
+      - vending machine
+    is_instance: true
+  laptop:
+    prompts:
+      - laptop
+    is_instance: true
+  bag:
+    prompts:
+      - bag
+    is_instance: true
+  person:
+    prompts:
+      - person
+    is_instance: true
+  locker:
+    prompts:
+      - locker
+    is_instance: true

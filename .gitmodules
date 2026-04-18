@@ -1,0 +1,6 @@
+[submodule "src/semantic_mapping/semantic_mapping/external/sam2"]
+	path = src/semantic_mapping/semantic_mapping/external/sam2
+	url = https://github.com/facebookresearch/sam2.git
+[submodule "src/utilities/rviz_2d_overlay_plugins"]
+	path = src/utilities/rviz_2d_overlay_plugins
+	url = https://github.com/teamspatzenhirn/rviz_2d_overlay_plugins.git
