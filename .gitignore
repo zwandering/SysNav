@@ -1,0 +1,56 @@
+# Build artifacts
+build/
+devel/
+install/
+**/log/
+*.o
+*.so
+Doxyfile
+
+# Python
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# IDE & OS
+.vscode/
+.cache/
+.DS_Store
+*~
+
+# Data & media
+bagfile/
+bagfile_*/
+*.mcap
+*.mp4
+
+# Model weights & inference
+*.pth
+*.pt
+*.engine
+*.onnx
+
+# Images & logs & misc binary
+*.png
+*.jpg
+*.npy
+*.txt
+*.log
+*.ts
+*.rviz
+!readme.txt
+
+# Simulation & runtime output
+sim_benchmark_results/
+debug/
+debug_obj/
+output/
+output_frames/
+recorded_videos/
+
+# Project-specific
+src/base_autonomy/vehicle_simulator/mesh/*
+!src/base_autonomy/vehicle_simulator/mesh/unity
+src/base_autonomy/vehicle_simulator/mesh/unity/*
+src/base_autonomy/vehicle_simulator/log/
+src/exploration_planner/tare_planner/rviz/

@@ -1,0 +1,16 @@
+<launch>
+
+  <node pkg="teleop_joy_controller" exec="teleopJoyController" name="teleopJoyController" output="screen" >
+    <param name="serialPort" value="/dev/ttyACM0" />
+    <param name="baudrate" value="115200" />
+    <param name="maxYawRate" value="80.0" />
+    <param name="maxSpeed" value="1.0" />
+  </node>
+
+  <node pkg="joy" exec="joy_node" name="ps3_joy" output="screen" >
+    <param name="dev" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+    <param name="autorepeat_rate" value="0.0" />
+  </node>
+
+</launch>

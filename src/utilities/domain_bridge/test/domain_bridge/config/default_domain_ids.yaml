@@ -1,0 +1,15 @@
+from_domain: 7
+to_domain: 11
+topics:
+  baz:
+    type: test_msgs/msg/Empty
+  /foo/bar:
+    type: test_msgs/msg/BasicTypes
+    from_domain: 6
+  foo:
+    type: test_msgs/msg/Strings
+    to_domain: 4
+  foobar:
+    type: test_msgs/msg/Strings
+    from_domain: 3
+    to_domain: 4

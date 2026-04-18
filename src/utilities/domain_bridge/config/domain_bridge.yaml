@@ -1,0 +1,23 @@
+name: domain_bridge
+from_domain: 0
+to_domain: 1
+topics:
+  camera/image/compressed:
+    type: sensor_msgs/msg/CompressedImage
+  registered_scan:
+    type: sensor_msgs/msg/PointCloud2
+  state_estimation:
+    type: nav_msgs/msg/Odometry
+  tf:
+    type: tf2_msgs/msg/TFMessage
+  tf_static:
+    type: tf2_msgs/msg/TFMessage
+  way_point:
+    type: geometry_msgs/msg/PointStamped
+    reversed: True
+  goal_point:
+    type: geometry_msgs/msg/PointStamped
+    reversed: True
+  joy:
+    type: sensor_msgs/msg/Joy
+    reversed: True
