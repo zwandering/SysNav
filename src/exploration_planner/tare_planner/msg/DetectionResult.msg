@@ -1,0 +1,9 @@
+std_msgs/Header header
+int32[] track_id
+float32[] x1
+float32[] y1
+float32[] x2
+float32[] y2
+string[] label
+float32[] confidence
+sensor_msgs/Image image

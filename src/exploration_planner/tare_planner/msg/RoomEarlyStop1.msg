@@ -1,0 +1,10 @@
+int32 room_id_1
+int32 room_id_2
+geometry_msgs/Point anchor_point_1
+geometry_msgs/Point anchor_point_2
+sensor_msgs/Image image_1
+sensor_msgs/Image image_2
+string room_type_1
+string room_type_2
+bool early_stop_1
+bool enter_wrong_room

@@ -1,0 +1,18 @@
+topics:
+  baz:
+    type: test_msgs/msg/Empty
+    from_domain: 10
+    to_domain: 7
+  /foo/bar:
+    type: test_msgs/msg/BasicTypes
+    from_domain: 6
+    to_domain: 10
+  foo:
+    type: test_msgs/msg/Strings
+    from_domain: 3
+    to_domain: 4
+  # Duplicate entry
+  foo:
+    type: test_msgs/msg/Strings
+    from_domain: 3
+    to_domain: 4

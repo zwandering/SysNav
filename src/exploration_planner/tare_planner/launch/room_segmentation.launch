@@ -1,0 +1,39 @@
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, OpaqueFunction
+from launch.substitutions import LaunchConfiguration
+from launch_ros.actions import Node, SetParameter
+
+
+def launch_room_segmentation_node(context, scenario):
+    scenario_str = str(scenario.perform(context))
+
+    room_seg_node = Node(
+        package='tare_planner',
+        executable='room_segmentation',
+        name='room_segmentation',
+        output='screen',
+        parameters=[get_package_share_directory('tare_planner')+'/' + scenario_str + '.yaml'],
+        # prefix=['xterm -e gdb -ex run --args']
+    )
+    return [room_seg_node]
+
+
+def generate_launch_description():
+    use_sim_time = LaunchConfiguration('use_sim_time')
+    scenario = LaunchConfiguration('scenario')
+
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value='false',
+            description='Use simulation (Gazebo) clock if true'
+        ),
+        DeclareLaunchArgument(
+            'scenario',
+            default_value='matterport',
+            description='Scenario name to load config from'
+        ),
+        SetParameter(name='use_sim_time', value=use_sim_time),
+        OpaqueFunction(function=launch_room_segmentation_node, args=[scenario])
+    ])

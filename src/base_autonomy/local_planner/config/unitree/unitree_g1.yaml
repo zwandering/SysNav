@@ -1,0 +1,78 @@
+# Sensor mounting offsets (used for TF transforms)
+sensorMountingOffsets:
+  ros__parameters:
+    sensorOffsetX: 0.0
+    sensorOffsetY: 0.0
+    sensorOffsetZ: 0.0
+
+# SLAM sensor configuration
+feature_extraction_node:
+  ros__parameters:
+    lidar_flip: false
+    blindFront: 0.2
+    blindBack: -0.2
+    blindLeft: 0.3
+    blindRight: -0.3
+    blindDiskLow: -0.05
+    blindDiskHigh: 0.05
+    blindDiskRadius: 0.5
+
+imu_preintegration_node:
+  ros__parameters:
+    lidar_flip: false
+
+localPlanner:
+  ros__parameters:
+
+    # obstacle height threshold
+    obstacleHeightThre: 0.1 # 0.1 for flat terrain
+
+    # Sensor offset
+    sensorOffsetX: 0.0
+    sensorOffsetY: 0.0
+  
+    # Vehicle dimensions
+    vehicleLength: 0.5
+    vehicleWidth: 0.5
+
+    # Speed limits
+    maxSpeed: 0.75
+    autonomySpeed: 0.75
+
+    # Path planning
+    pathScale: 0.875
+    minPathScale: 0.675
+    pathScaleStep: 0.1
+    minPathRange: 0.8
+    pathRangeStep: 0.6
+    adjacentRange: 3.5
+
+    # Goal tolerances
+    goalClearRange: 0.6
+    goalBehindRange: 0.8
+    goalReachedThreshold: 0.3
+    goalYawThreshold: 0.15
+
+pathFollower:
+  ros__parameters:
+    # Control parameters
+    lookAheadDis: 0.5
+    maxAccel: 1.5 #slow 1.5, fast 2.0
+    goalYawGain: 2.0
+
+    maxSpeed: 0.75
+    autonomySpeed: 0.75
+
+    # Slow down threshold
+    slowDwnDisThre: 0.875
+    omniDirDiffThre: 1.5
+    yawRateGain: 1.5 #slow 1.5, fast 2.0
+    stopYawRateGain: 1.5 #slow 1.5, fast 2.0
+    maxYawRate: 40.0 #slow 40.0, fast 60.0
+    dirDiffThre: 0.4
+    stopDisThre: 0.4
+
+terrainAnalysis:
+  ros__parameters:
+    minDyObsVFOV: -55.0
+    maxDyObsVFOV: 10.0
