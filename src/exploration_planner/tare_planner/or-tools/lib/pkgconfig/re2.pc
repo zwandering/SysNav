@@ -1,0 +1,9 @@
+includedir=/root/or-tools/or-tools_x86_64_Ubuntu-20.04_cpp_v9.8.3296/include
+libdir=/root/or-tools/or-tools_x86_64_Ubuntu-20.04_cpp_v9.8.3296/lib
+
+Name: re2
+Description: RE2 is a fast, safe, thread-friendly regular expression engine.
+Requires: absl_base absl_core_headers absl_fixed_array absl_flags absl_flat_hash_map absl_flat_hash_set absl_inlined_vector absl_optional absl_span absl_str_format absl_strings absl_synchronization
+Version: 11.0.0
+Cflags: -pthread -I${includedir}
+Libs: -pthread -L${libdir} -lre2

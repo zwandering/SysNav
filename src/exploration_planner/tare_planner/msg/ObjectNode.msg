@@ -1,0 +1,10 @@
+std_msgs/Header header
+int32[] object_id
+string label
+geometry_msgs/Point position
+geometry_msgs/Point[8] bbox3d
+sensor_msgs/PointCloud2 cloud
+bool status
+string img_path
+bool is_asked_vlm
+int32 viewpoint_id

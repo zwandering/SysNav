@@ -1,0 +1,22 @@
+digraph {
+    rankdir="LR";
+    service_in -> node_domain_1 [dir="both"] [label="client"]
+    node_domain_1 -> rep_1_to_2
+    rep_1_to_2 -> node_domain_2
+    node_domain_2 -> req_2_to_1
+    req_2_to_1 -> node_domain_1
+    node_domain_2 -> service_out [dir="both"] [label="service"]
+
+    subgraph cluster_domain_bridge {
+        node_domain_1 [shape=oval, color="#000000"];
+        node_domain_2 [shape=oval, color="#000000"];
+        rep_1_to_2 [shape=box, color="#000000", label="Response"];
+        req_2_to_1 [shape=box, color="#000000", label="Request"];
+        {rank = same; rep_1_to_2; req_2_to_1}
+        label="domain_bridge";
+        graph[style=dashed];
+    }
+      
+    service_in [shape=oval, color="#000000", label="External\n /add_two_ints server"]
+    service_out [shape=oval, color="#000000", label="External\n /add_two_ints client"];
+}

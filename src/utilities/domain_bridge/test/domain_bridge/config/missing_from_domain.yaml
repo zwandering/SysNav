@@ -1,0 +1,4 @@
+topics:
+  foo:
+    type: test_msgs/msg/BasicTypes
+    to_domain: 7
