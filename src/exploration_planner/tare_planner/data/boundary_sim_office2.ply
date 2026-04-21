@@ -1,0 +1,14 @@
+ply
+format ascii 1.0
+element vertex 7
+property float x
+property float y
+property float z
+end_header
+-12.0	-10.0	0
+38.0	-10.0	0
+38.0	12.5	0
+13.5	12.5	0
+13.5	36.5	0
+-12.0	36.5	0
+-12.0	-10.0	0

@@ -1,0 +1,24 @@
+digraph {
+    rankdir="LR";
+    topic_in_1 -> node_domain_1 [label="sub"]
+    topic_in_3 -> node_domain_3 [label="sub"]
+    node_domain_1 -> chatter_1_to_2
+    node_domain_3 -> chatter_3_to_2
+    chatter_1_to_2 -> node_domain_2
+    chatter_3_to_2 -> node_domain_2
+    node_domain_2 -> topic_out [label="pub"]
+
+    subgraph cluster_domain_bridge {
+        node_domain_1 [shape=oval, color="#000000"];
+        node_domain_2 [shape=oval, color="#000000"];
+        node_domain_3 [shape=oval, color="#000000"];
+        chatter_1_to_2 [shape=box, color="#000000", label="message data"];
+        chatter_3_to_2 [shape=box, color="#000000", label="message data"];
+        label="domain_bridge";
+        graph[style=dashed];
+    }
+      
+    topic_in_1 [label="/chatter", color="#ffffff"]
+    topic_in_3 [label="/chatter", color="#ffffff"]
+    topic_out [label="/chatter", color="#ffffff"]
+}

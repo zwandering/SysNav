@@ -1,0 +1,8 @@
+<launch>
+  <arg name="config" default="$(find-pkg-share domain_bridge)/config/domain_bridge.yaml" />
+
+  <executable name="domain_bridge"
+              cmd="$(exec-in-pkg domain_bridge domain_bridge)
+                   $(var config)"
+              output="both" />
+</launch>

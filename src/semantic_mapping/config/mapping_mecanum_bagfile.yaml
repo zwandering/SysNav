@@ -1,0 +1,29 @@
+semantic_mapping_node:
+  ros__parameters:
+    platform: mecanum_bagfile
+    detection_linear_state_time_bias: 0.0
+    detection_angular_state_time_bias: 0.0
+    image_processing_interval: 0.5
+    visualize: false
+    vis_interval: 0.5
+    annotate_image: true
+    grounding_score_thresh: 0.35
+
+    target_object: refrigerator
+
+    object_file: src/semantic_mapping/semantic_mapping/config/objects.yaml
+
+detection_node:
+  ros__parameters:
+    platform: mecanum_bagfile
+    detection_linear_state_time_bias: 0.0
+    detection_angular_state_time_bias: 0.0
+    image_processing_interval: 0.5
+    visualize: false
+    vis_interval: 0.5
+    annotate_image: true
+    grounding_score_thresh: 0.35
+
+    target_object: refrigerator
+
+    object_file: src/semantic_mapping/semantic_mapping/config/objects.yaml

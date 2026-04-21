@@ -1,0 +1,9 @@
+from_domain: 10
+to_domain: 7
+topics:
+  foo:
+    type: test_msgs/msg/BasicTypes
+    # QoS options have wrong YAML type
+    qos:
+      - reliability: best_effort
+      - durability: transient_local
