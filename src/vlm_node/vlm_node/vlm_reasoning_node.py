@@ -12,8 +12,10 @@ from torchvision import transforms
 import cv2
 import numpy as np
 from std_msgs.msg import String, Int32
-import google.generativeai as genai
-from vlm_node.constants import GEMINI_API_KEY, MODEL_NAME, target_object, spatial_condition, attribute_condition, room_condition, anchor_object
+from vlm_node.constants import (
+    VLM_PROVIDER, VLM_API_KEY, VLM_BASE_URL, MODEL_NAME, MODEL_NAME_LITE,
+    target_object, spatial_condition, attribute_condition, room_condition, anchor_object,
+)
 from tare_planner.msg import RoomType, RoomEarlyStop1, VlmAnswer, ObjectType, NavigationQuery, TargetObjectInstruction, TargetObject, TargetObjectWithSpatial
 from rviz_2d_overlay_msgs.msg import OverlayText
 from openai import OpenAI
@@ -43,21 +45,18 @@ class VLMNode(Node):
         self.get_logger().info(f"Log directory: {self.log_dir}")
 
         try:
-            genai.configure(api_key=GEMINI_API_KEY)
             self.vlm_model = OpenAI(
-                api_key=GEMINI_API_KEY,
-                base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+                api_key=VLM_API_KEY,
+                base_url=VLM_BASE_URL,
             )
-            self.get_logger().info("✅ VLM initialized successfully")
+            self.get_logger().info(f"✅ VLM initialized ({VLM_PROVIDER})")
         except Exception as e:
             self.get_logger().error(f"❌ VLM initialization failed: {e}")
             return
 
-        # self.room_type_vlm_model = "gemini-2.5-flash-lite"  # Use the flash lite model for faster response
-        self.room_type_vlm_model = "gemini-2.5-flash" 
-        self.room_nav_vlm_model = "gemini-2.5-flash"  
-        # TODO: Unit Test
-        self.object_type_vlm_model = "gemini-2.5-flash-lite"  
+        self.room_type_vlm_model = MODEL_NAME
+        self.room_nav_vlm_model = MODEL_NAME
+        self.object_type_vlm_model = MODEL_NAME_LITE
         
         # queues
         self.room_type_query_queue = deque()
