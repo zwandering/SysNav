@@ -1,0 +1,9 @@
+topics:
+  - foo:
+      type: test_msgs/msg/BasicTypes
+      from_domain: 10 
+      to_domain: 7
+  - bar:
+      type: test_msgs/msg/BasicTypes
+      from_domain: 10 
+      to_domain: 7

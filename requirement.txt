@@ -1,0 +1,32 @@
+# basic dependencies
+numpy==1.26.4
+opencv-python
+scipy
+pillow
+tqdm
+pyyaml
+lark
+pytest
+moondream
+openai
+spacy
+clip
+onnx
+tensorrt
+google-generativeai
+supervision
+shapely
+lap
+line_profiler
+rerun
+
+# 3D processing
+open3d
+
+# vision
+ultralytics
+
+# SAM2 and EdgeTAM dependencies
+hydra-core
+omegaconf
+timm

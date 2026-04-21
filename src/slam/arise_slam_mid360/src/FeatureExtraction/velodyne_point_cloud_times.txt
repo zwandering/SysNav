@@ -1,0 +1,33 @@
+Velodyne
+
+[feature_extraction_node-1] laser msg head stamp1654396984.1272060871
+[feature_extraction_node-1] Velodyne point time 0.0000000000
+[feature_extraction_node-1] Velodyne point time 0.0000023040
+[feature_extraction_node-1] Velodyne point time 0.0000046080
+[feature_extraction_node-1] Velodyne point time 0.0000069120
+[feature_extraction_node-1] Velodyne point time 0.0000092160
+[feature_extraction_node-1] Velodyne point time 0.0000115200
+[feature_extraction_node-1] Velodyne point time 0.0000138240
+[feature_extraction_node-1] Velodyne point time 0.0000161280
+[feature_extraction_node-1] Velodyne point time 0.0000184320
+[feature_extraction_node-1] Velodyne point time 0.0000207360
+
+
+livox 
+
+[feature_extraction_node-1] laser msg head stamp1674073689.5654149055
+[feature_extraction_node-1] livox time 0.0000000000
+[feature_extraction_node-1] livox time 0.0049470002
+[feature_extraction_node-1] livox time 0.0098940004
+[feature_extraction_node-1] livox time 0.0148409996
+[feature_extraction_node-1] livox time 0.0197880007
+[feature_extraction_node-1] livox time 0.0247350000
+[feature_extraction_node-1] livox time 0.0296819992
+[feature_extraction_node-1] livox time 0.0346289985
+[feature_extraction_node-1] livox time 0.0395760015
+[feature_extraction_node-1] livox time 0.0445230007
+
+
+
+
+

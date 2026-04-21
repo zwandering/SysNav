@@ -1,0 +1,6 @@
+string target_object
+string room_condition
+string spatial_condition
+string attribute_condition
+string anchor_object
+string attribute_condition_anchor

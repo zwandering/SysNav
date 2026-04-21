@@ -1,0 +1,56 @@
+name: domain_bridge
+from_domain: 0
+to_domain: 1
+topics:
+  # NUC to 4090 (0 → 1)
+  camera/image/compressed:
+    type: sensor_msgs/msg/CompressedImage
+  registered_scan:
+    type: sensor_msgs/msg/PointCloud2
+  state_estimation:
+    type: nav_msgs/msg/Odometry
+  aft_mapped_to_init_incremental:
+    type: nav_msgs/msg/Odometry
+  viewpoint_rep_header:
+    type: tare_planner/msg/ViewpointRep
+  /room_type_query:
+    type: tare_planner/msg/RoomType
+  /room_navigation_query:
+    type: tare_planner/msg/NavigationQuery
+  /room_early_stop_1:
+    type: tare_planner/msg/RoomEarlyStop1
+  /target_object_query:
+    type: tare_planner/msg/TargetObject
+  /target_object_spatial_query:
+    type: tare_planner/msg/TargetObjectWithSpatial
+  /anchor_object_query:
+    type: tare_planner/msg/TargetObject
+  
+  # 4090 to NUC (1 → 0) - reversed topics
+  object_nodes:
+    type: tare_planner/msg/ObjectNode
+    reversed: True
+  /room_type_answer:
+    type: tare_planner/msg/RoomType
+    reversed: True
+  /room_navigation_answer:
+    type: tare_planner/msg/VlmAnswer
+    reversed: True
+  /target_object_instruction:
+    type: tare_planner/msg/TargetObjectInstruction
+    reversed: True
+  /target_object_answer:
+    type: tare_planner/msg/TargetObject
+    reversed: True
+  /anchor_object_answer:
+    type: tare_planner/msg/TargetObject
+    reversed: True
+  /obj_boxes:
+    type: visualization_msgs/msg/MarkerArray
+    reversed: True
+  /obj_labels:
+    type: visualization_msgs/msg/MarkerArray
+    reversed: True
+  /vlm_answer:
+    type: rviz_2d_overlay_msgs/msg/OverlayText
+    reversed: True
