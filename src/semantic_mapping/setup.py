@@ -20,7 +20,7 @@ setup(
     maintainer='Zihan Liu',
     maintainer_email='zihanli4@andrew.cmu.edu',
     description='Semantic mapping node for TARE planner',
-    license='PolyForm-Noncommercial-1.0.0',
+    license='BSD-3-Clause',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [

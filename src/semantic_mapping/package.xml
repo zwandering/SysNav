@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>Semantic mapping node for TARE planner</description>
   <maintainer email="zihanli4@andrew.cmu.edu">Zihan Liu</maintainer>
-  <license>PolyForm-Noncommercial-1.0.0</license>
+  <license>BSD-3-Clause</license>
 
   <depend>rclpy</depend>
   <depend>rclcpp</depend>

@@ -20,7 +20,7 @@ setup(
     maintainer='haokun_ros',
     maintainer_email='haokunz@andrew.cmu.edu',
     description='Vision-Language Model reasoning node for object navigation',
-    license='PolyForm-Noncommercial-1.0.0',
+    license='BSD-3-Clause',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
