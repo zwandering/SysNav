@@ -476,6 +476,6 @@ If you find this work useful, please consider citing:
 
 ## License
 
-This project is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE). You may use, modify, and distribute the software for any **noncommercial** purpose (research, education, personal use, government, charitable organizations). Commercial use is not permitted under this license.
+This project is licensed under the [BSD 3-Clause License](LICENSE).
 
 Some third-party packages retain their original open-source licenses (BSD, MIT, Apache 2.0, GPLv3). See individual `package.xml` files for per-package license declarations.
