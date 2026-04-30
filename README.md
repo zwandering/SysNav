@@ -102,7 +102,7 @@ This branch targets the **Unitree G1** humanoid. For other platforms, switch to 
 
 - Unitree G1 humanoid, controlled via WebRTC
 - Livox Mid-360 lidar + Ricoh Theta Z1 360-degree camera
-- Intel NUC (Asus nuc 14 pro) as the onboard computer
+- Asus NUC 14 Pro (Intel Core Ultra 5) as the onboard computer
 - Desktop workstation / Laptop with NVIDIA RTX 4090 for the semantic mapping and VLM reasoning
 - Wired / WiFi network shared between robot, NUC, and desktop
 
