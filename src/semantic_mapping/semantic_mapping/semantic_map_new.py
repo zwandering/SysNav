@@ -444,7 +444,7 @@ class ObjMapper():
                     single_obj.inactive_frame += 1
                     single_obj.regularize_shape_v2(self.percentile_thresh)
                     # self.log_info(f"Obj {single_obj.class_id}:{single_obj.obj_id} with points {single_obj.valid_indices_regularized.shape[0]}, inactive frame {single_obj.inactive_frame}")
-                    if single_obj.valid_indices_regularized.shape[0] < 15 and single_obj.inactive_frame > 50 and single_obj.get_dominant_label!=self.target_object: # TODO: voxel count thresh should be related to the object class
+                    if single_obj.valid_indices_regularized.shape[0] < 15 and single_obj.inactive_frame > 50 and single_obj.get_dominant_label()!=self.target_object: # TODO: voxel count thresh should be related to the object class
                         self.publish_deleted_object(single_obj, detection_stamp)
                         single_obj.cleanup_images(self.save_queue)
                         self.single_obj_list.remove(single_obj)
