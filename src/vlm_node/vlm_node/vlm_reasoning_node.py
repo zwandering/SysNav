@@ -892,12 +892,15 @@ class VLMNode(Node):
         viewpoint_imgs = []
         viewpoint_img_bases = []
         for vp_id in viewpoint_ids:
-            if vp_id <= 0:
+            if vp_id < 0:
                 continue
             vp_image_path = os.path.join(self.viewpoint_path, f"viewpoint_{vp_id}.png")
             vp_pose_path = os.path.join(self.viewpoint_path, f"viewpoint_{vp_id}_transform.npy")
             if not os.path.exists(vp_image_path):
                 self.get_logger().warning(f"Viewpoint image {vp_image_path} does not exist")
+                continue
+            if not os.path.exists(vp_pose_path):
+                self.get_logger().warning(f"Viewpoint pose {vp_pose_path} does not exist")
                 continue
             viewpoint_image = cv2.imread(vp_image_path)
             viewpoint_transform_matrix = np.load(vp_pose_path)
